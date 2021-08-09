@@ -11,7 +11,8 @@
     "dev:ssr": "ng run angular-client:serve-ssr",
     "serve:ssr": "node dist/angular-client/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-client:server:production",
-    "prerender": "ng run angular-client:prerender"
+    "prerender": "ng run angular-client:prerender",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
