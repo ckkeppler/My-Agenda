@@ -1,0 +1,20 @@
+<form #form="ngForm" (ngSubmit)="save(form)" class="edit-container">
+  <textarea
+    type="text"
+    cols="30"
+    rows="10"
+    name="task"
+    class="edit-task"
+    [ngModel]="task.task"
+  >
+  </textarea>
+
+  <input type="submit" value="Save" class="task-btn save" />
+  <button
+    [routerLink]="['/tasks']"
+    routerLinkActive="router-link-active"
+    class="task-btn cancel"
+  >
+    Cancel
+  </button>
+</form>

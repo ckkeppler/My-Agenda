@@ -1,0 +1,25 @@
+<div class="tasks">
+  <div class="task-container">
+    <form #form="ngForm" (ngSubmit)="add(form)">
+      <input
+        type="text"
+        name="task"
+        placeholder="What to do..."
+        class="task-input"
+        ngModel
+      />
+      <input type="submit" value="Add Task" class="task-submit" />
+    </form>
+  </div>
+  <div
+    *ngFor="let task of tasks; let i = index"
+    class="task {{ task.completed ? 'done' : '' }}"
+  >
+    <div class="id">
+      {{ i + 1 }}
+    </div>
+    <div class="content" (click)="toggle(i)">{{ task.task }}</div>
+    <button class="task-btn edit" (click)="edit(task)">Edit</button>
+    <button class="task-btn remove" (click)="delete(i)">Remove</button>
+  </div>
+</div>

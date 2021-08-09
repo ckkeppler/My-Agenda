@@ -1,0 +1,102 @@
+.task {
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  width: 100%;
+  height: max-content;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease-out;
+}
+
+.task:nth-child(even) {
+  background-color: #eee;
+}
+
+.task:last-of-type {
+  border-bottom: 0;
+}
+
+.task .id {
+  flex: 1 1 50px;
+  font-size: 20px;
+  padding-top: 6px;
+}
+
+.task .content {
+  flex: 1 1 100%;
+  font-size: 20px;
+  padding-top: 8px;
+}
+
+.task.done .content {
+  text-decoration: line-through;
+  padding: auto;
+}
+
+.task-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  margin-top: 15px;
+  font-size: 20px;
+  outline: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.task-submit {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(17, 163, 182);
+  color: #fff;
+  margin: 30px auto;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 2px;
+}
+
+.task-btn {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 15px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 2px;
+  height: 35px;
+  margin: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: coral;
+}
+
+.remove {
+  background-color: rgb(255, 93, 187);
+}
+
+@media (max-width: 800px) {
+  .id .content {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .edit {
+    margin-left: 15px;
+  }
+}

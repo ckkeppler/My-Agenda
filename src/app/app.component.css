@@ -1,0 +1,23 @@
+.app {
+  width: 800px;
+  margin: 100px auto;
+}
+
+@media (max-width: 800px) {
+  .app {
+    width: 400px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+.header-img {
+  height: 4em;
+  border-radius: 50%;
+}

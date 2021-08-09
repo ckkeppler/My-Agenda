@@ -1,0 +1,47 @@
+.edit-container {
+  display: block;
+  text-align: center;
+  height: 200px;
+}
+
+.edit-task {
+  background: transparent;
+  width: 100%;
+  height: 75%;
+  resize: none;
+  font-size: 2em;
+  padding: 8px;
+  font-weight: 400;
+  color: honeydew;
+  border-radius: 5px;
+}
+
+.edit-task:focus {
+  outline: none;
+}
+
+.task-btn {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 15px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 2px;
+  height: 35px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.save {
+  background: rgb(248, 89, 208);
+  margin: 25px 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+.cancel {
+  background: rgb(250, 174, 104);
+  margin: 25px 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
