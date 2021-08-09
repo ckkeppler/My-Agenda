@@ -6,10 +6,16 @@
     name="task"
     class="edit-task"
     [ngModel]="task.task"
+    required
   >
   </textarea>
 
-  <input type="submit" value="Save" class="task-btn save" />
+  <input
+    type="submit"
+    value="Save"
+    class="task-btn save"
+    [disabled]="!form.valid"
+  />
   <button
     [routerLink]="['/tasks']"
     routerLinkActive="router-link-active"

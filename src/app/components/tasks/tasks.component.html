@@ -7,8 +7,15 @@
         placeholder="What to do..."
         class="task-input"
         ngModel
+        required
       />
-      <input type="submit" value="Add Task" class="task-submit" />
+
+      <input
+        type="submit"
+        value="Add Task"
+        class="task-submit"
+        [disabled]="!form.valid"
+      />
     </form>
   </div>
   <div
