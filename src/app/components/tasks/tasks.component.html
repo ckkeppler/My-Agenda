@@ -1,5 +1,5 @@
-<div class="tasks">
-  <div class="task-container">
+<main class="tasks">
+  <section class="task-container">
     <form #form="ngForm" (ngSubmit)="add(form)">
       <input
         type="text"
@@ -9,7 +9,6 @@
         ngModel
         required
       />
-
       <input
         type="submit"
         value="Add Task"
@@ -17,8 +16,8 @@
         [disabled]="!form.valid"
       />
     </form>
-  </div>
-  <div
+  </section>
+  <section
     *ngFor="let task of tasks; let i = index"
     class="task {{ task.completed ? 'done' : '' }}"
   >
@@ -28,5 +27,5 @@
     <div class="content" (click)="toggle(i)">{{ task.task }}</div>
     <button class="task-btn edit" (click)="edit(task)">Edit</button>
     <button class="task-btn remove" (click)="delete(i)">Remove</button>
-  </div>
-</div>
+  </section>
+</main>
